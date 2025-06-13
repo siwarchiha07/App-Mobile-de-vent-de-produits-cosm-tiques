@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Contenu principal avec CoordinatorLayout -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- AppBarLayout pour gérer le défilement -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:elevation="0dp">
+
+            <!-- Toolbar avec Menu Icon et Logo -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <!-- Bouton Menu à gauche -->
+                <ImageView
+                    android:id="@+id/menuIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    android:src="@android:drawable/ic_menu_sort_by_size" />
+
+                <!-- Logo au centre -->
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- Titre Explore Trendy Products -->
+            <TextView
+                android:id="@+id/exploreTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Explore\nTrendy Products"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp" />
+
+            <!-- Filtres pour les catégories -->
+            <LinearLayout
+                android:id="@+id/categoryFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ToggleButton
+                    android:id="@+id/filterAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="All"
+                    android:textOff="All"
+                    android:background="@drawable/button_unselected_bg"
+                    android:textColor="@color/black" />
+
+                <ToggleButton
+                    android:id="@+id/filterMakeup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="Makeup"
+                    android:textOff="Makeup"
+                    android:background="@drawable/button_unselected_bg"
+                    android:textColor="@color/black" />
+
+                <ToggleButton
+                    android:id="@+id/filterSkincare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="Skincare"
+                    android:textOff="Skincare"
+                    android:background="@drawable/button_unselected_bg"
+                    android:textColor="@color/black" />
+
+                <ToggleButton
+                    android:id="@+id/filterBrushes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="Brushes"
+                    android:textOff="Brushes"
+                    android:background="@drawable/button_unselected_bg"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- RecyclerView pour afficher les produits -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:padding="8dp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Menu latéral avec NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_items"
+        app:headerLayout="@layout/menu_header" />
+
+    <!-- Menu latéral personnalisé -->
+    <LinearLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <!-- En-tête (menu_header.xml) -->
+        <include layout="@layout/menu_header" />
+
+        <!-- Texte pour Produits Favoris -->
+        <TextView
+            android:id="@+id/favoritesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Produits Favoris"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Options supplémentaires -->
+        <TextView
+            android:id="@+id/dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Dashboard"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/myAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Mon Compte"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Déconnexion"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

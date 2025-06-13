@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ziva</string>
+    <string name="nav_account">Account</string>
+    <string name="nav_contact">Contact</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_logout">Logout</string>
+    <string name="navigation_drawer_open">Ouvrir le menu</string>
+    <string name="navigation_drawer_close">Fermer le menu</string>
+</resources>
