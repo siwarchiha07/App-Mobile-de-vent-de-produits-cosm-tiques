@@ -2,7 +2,7 @@
 
 **Ziva** is a mobile application developed with Android Studio that allows users to explore and shop for cosmetic products in a smooth and user-friendly interface.
 
-                                        ![image](https://github.com/user-attachments/assets/270ff4c8-c7d2-4bac-93e8-759fb8e8bb2a)
+ ![image](https://github.com/user-attachments/assets/270ff4c8-c7d2-4bac-93e8-759fb8e8bb2a)
 
 ## ✨ Features
 
