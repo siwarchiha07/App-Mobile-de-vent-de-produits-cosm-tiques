@@ -1,6 +1,6 @@
-# 💄 Zive – Cosmetics Shopping App
+# 💄 Ziva – Cosmetics Shopping App
 
-**Zive** is a mobile application developed with Android Studio that allows users to explore and shop for cosmetic products in a smooth and user-friendly interface.
+**Ziva** is a mobile application developed with Android Studio that allows users to explore and shop for cosmetic products in a smooth and user-friendly interface.
 
 ## ✨ Features
 
