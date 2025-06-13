@@ -20,7 +20,7 @@
 
 ## 📱 Screenshots
 ![image](https://github.com/user-attachments/assets/9eca11da-2a25-4c60-8c34-d9207fe0df1a)
-![image](https://github.com/user-attachments/assets/99a5c52e-da63-4e4b-ad28-3d36466690ce)
+![image](https://github.com/user-attachments/assets/cf7afb02-a42f-41ba-b616-e4d7a5269aa4)
 ![image](https://github.com/user-attachments/assets/68b79e9f-1458-436b-b1c8-8a6a5300dfcf)
 
 
